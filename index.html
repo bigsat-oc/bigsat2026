@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <base href=".">
+  <link rel="shortcut icon" type="image/png" href="assets/logo.png"/>
+  <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
+  <title>BiGSAT | Home</title>
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Apr 16, 2026 08:00:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("countdown").innerHTML = days + " days " + hours + " hours "
+      + minutes + " minutes " + seconds + " seconds until BiGSAT 2026";
+        
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "BiGSAT 2026 has started!";
+      }
+    }, 1000);
+  </script>
+
+  <style>
+    
+    #tabbed-nav {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .tab {
+      display: inline-block;
+      padding: 12px 20px;
+      margin-right: 5px;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      background-color: #f8f9fa;
+      border-radius: 5px 5px 0 0;
+      transition: all 0.3s ease;
+    }
+    
+    .tab:hover {
+      background-color: #e9ecef;
+    }
+    
+    .tab.active {
+      border-bottom: 3px solid #007bff;
+      background-color: white;
+      font-weight: bold;
+    }
+    
+    .images {
+      display: none;
+      gap: 15px;
+      padding: 20px 0;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+    
+    .images.active {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .images img {
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .images img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+
+</head>
+
+<body>
+  
+  <div class="banner">
+      <img src="assets/banner.png">
+  </div>
+
+  <div class="navbar">
+    <a href=".">Home</a>
+    <a href="registration">Registration</a>
+    <a href="conference">Conference</a>
+    <a href="schedule">Schedule</a>
+    <a href="directions">Directions</a>
+    <div class="dropdown">
+      <button class="dropbtn">About
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="about/bigsat">What is BiGSAT?</a>
+        <a href="about/oc">Organization Committee</a>
+        <a href="about/directors">Program Directors</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Past Events
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href=".">2026</a>
+        <a href="https://bigsat-oc.github.io/bigsite-archive/" target="_blank">2016-2025 (BIG Research Day)</a>
+      </div>
+    </div> 
+  </div>
+
+  <a href="https://drive.google.com/file/d/12b7h8AoyeNF_g4GIPI-9jVC4DnKRa_Yr/view?usp=drive_link" class="myButton" target="_blank">BiGSAT 2026 Event Booklet</a>
+  
+  <!-- <h2 id="countdown"></h2> -->
+  <h2>BiGSAT 2026 has ended. See you next year!</h2>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="assets/slides/keynote.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="assets/slides/speakers_announcement.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="assets/slides/savethedate.png" style="width:100%">
+    </div>
+
+  </div>
+    
+  <script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 5000);
+  }
+  </script>
+
+  <h4>
+    Students from the <a href="https://www.bioinformatics.ubc.ca/" target="_blank">Bioinformatics (BIOF)</a> and <a href="https://www.gsat.ubc.ca/" target="_blank">Genome Science and Technology (GSAT)</a> graduate programs at the University of British Columbia are pleased to present their 16th Annual Research Day on Thursday, April 16, 2026, at the Life Science Insitute. Graduate students from both programs will come together to present their research and attend seminars led by invited academic and industry professionals.
+  </h4>
+
+  <h2>
+    Photo Gallery
+  </h2>
+
+  <div id="tabbed-nav">
+    <div class="tab active" data-target="tab-1">Event</div>
+    <div class="tab" data-target="tab-2">Keynote</div>
+    <div class="tab" data-target="tab-3">Faculties</div>
+    <div class="tab" data-target="tab-4">Mini Symposia</div>
+    <div class="tab" data-target="tab-5">Speed Talks</div>
+    <div class="tab" data-target="tab-6">Posters</div>
+    <div class="tab" data-target="tab-7">Awards</div>
+  </div>
+ 
+  <div id="tabbed-content">
+    <div id="tab-1" class="images active">
+      <img src="assets/gallery/Event/DSC_0003.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0006.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0010.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0013.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0015.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0019.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0020.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0041.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0043.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0044.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0052.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0053.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0106.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0159.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0194.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0196.JPG" width="400px">
+      <img src="assets/gallery/Event/DSC_0199.JPG" width="400px">
+    </div>
+    
+    <div id="tab-2" class="images">
+      <img src="assets/gallery/Keynote/DSC_0022.JPG" width="400px">
+      <img src="assets/gallery/Keynote/DSC_0023.JPG" width="400px">
+      <img src="assets/gallery/Keynote/DSC_0025.JPG" width="400px">
+      <img src="assets/gallery/Keynote/DSC_0026.JPG" width="400px">
+    </div>
+    
+    <div id="tab-3" class="images">
+      <img src="assets/gallery/Faculties/DSC_0078.JPG" width="400px">
+      <img src="assets/gallery/Faculties/DSC_0084.JPG" width="400px">
+      <img src="assets/gallery/Faculties/DSC_0089.JPG" width="400px">
+      <img src="assets/gallery/Faculties/DSC_0094.JPG" width="400px">
+      <img src="assets/gallery/Faculties/DSC_0096.JPG" width="400px">
+      <img src="assets/gallery/Faculties/DSC_0101.JPG" width="400px">
+    </div>
+
+    <div id="tab-4" class="images">
+      <img src="assets/gallery/Mini Symposia/DSC_0108.JPG" width="400px">
+      <img src="assets/gallery/Mini Symposia/DSC_0110.JPG" width="400px">
+      <img src="assets/gallery/Mini Symposia/DSC_0112.JPG" width="400px">
+      <img src="assets/gallery/Mini Symposia/DSC_0115.JPG" width="400px">
+      <img src="assets/gallery/Mini Symposia/DSC_0118.JPG" width="400px">
+      <img src="assets/gallery/Mini Symposia/DSC_0125.JPG" width="400px">
+      <img src="assets/gallery/Mini Symposia/DSC_0128.JPG" width="400px">
+      <img src="assets/gallery/Mini Symposia/DSC_0132.JPG" width="400px">
+    </div>
+    
+    <div id="tab-5" class="images">
+      <img src="assets/gallery/Speed Talks/DSC_0166.JPG" width="400px">
+      <img src="assets/gallery/Speed Talks/DSC_0167.JPG" width="400px">
+      <img src="assets/gallery/Speed Talks/DSC_0169.JPG" width="400px">
+      <img src="assets/gallery/Speed Talks/DSC_0172.JPG" width="400px">
+      <img src="assets/gallery/Speed Talks/DSC_0173.JPG" width="400px">
+      <img src="assets/gallery/Speed Talks/DSC_0174.JPG" width="400px">
+      <img src="assets/gallery/Speed Talks/DSC_0178.JPG" width="400px">
+      <img src="assets/gallery/Speed Talks/DSC_0179.JPG" width="400px">
+      <img src="assets/gallery/Speed Talks/DSC_0181.JPG" width="400px">
+      <img src="assets/gallery/Speed Talks/DSC_0185.JPG" width="400px">
+      <img src="assets/gallery/Speed Talks/DSC_0189.JPG" width="400px">
+    </div>
+
+    <div id="tab-6" class="images">
+      <img src="assets/gallery/Posters/DSC_0016.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0030.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0032.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0033.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0034.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0035.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0036.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0037.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0038.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0039.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0045.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0046.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0047.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0048.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0049.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0050.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0055.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0056.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0059.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0060.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0061.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0062.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0063.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0064.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0065.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0066.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0067.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0068.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0069.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0070.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0071.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0072.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0073.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0074.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0075.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0076.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0077.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0135.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0136.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0137.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0138.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0140.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0141.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0142.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0143.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0144.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0145.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0146.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0147.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0148.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0149.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0150.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0151.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0152.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0153.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0154.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0155.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0156.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0157.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0158.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0160.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0161.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0162.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0163.JPG" width="400px">
+      <img src="assets/gallery/Posters/DSC_0165.JPG" width="400px">
+    </div>
+
+    <div id="tab-7" class="images">
+      <img src="assets/gallery/Awards/DSC_0200.JPG" width="400px">
+      <img src="assets/gallery/Awards/DSC_0201.JPG" width="400px">
+      <img src="assets/gallery/Awards/DSC_0202.JPG" width="400px">
+      <img src="assets/gallery/Awards/DSC_0205.JPG" width="400px">
+      <img src="assets/gallery/Awards/DSC_0206.JPG" width="400px">
+      <img src="assets/gallery/Awards/DSC_0207.JPG" width="400px">
+    </div>
+
+  </div>
+
+  <script>
+    // Get all tabs and image containers
+    const tabs = document.querySelectorAll('.tab');
+    const imageContainers = document.querySelectorAll('.images');
+    
+    // Add click event listener to each tab
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        tabs.forEach(t => t.classList.remove('active'));
+        
+        // Add active class to clicked tab
+        tab.classList.add('active');
+        
+        // Hide all image galleries
+        imageContainers.forEach(container => {
+          container.classList.remove('active');
+        });
+        
+        // Show the target image gallery
+        const targetId = tab.getAttribute('data-target');
+        const targetContainer = document.getElementById(targetId);
+        targetContainer.classList.add('active');
+      });
+    });
+  </script>
+
+  <h2>
+    Gold Tier Sponsors
+  </h2>
+
+  <div class="sponsors">
+    <div class="sponsor-row">
+      <a href="https://www.bioinformatics.ubc.ca/" target="_blank">
+        <img src="assets/sponsors/BIOFLogo.png" alt="UBC Bioinformatics Graduate Program">
+      </a>
+      <a href="https://www.gsat.ubc.ca/" target="_blank">
+        <img src="assets/sponsors/GSATLogo.png" alt="UBC Genome Science and Technology Graduate Program">
+      </a>
+    </div>
+    <div class="sponsor-row">
+      <a href="https://langara.ca/" target="_blank">
+        <img src="assets/sponsors/LangaraLogo.png" alt="Langara Bioinformatics Program">
+      </a>
+    </div>
+  </div>
+
+  <h2>
+    Silver Tier Sponsors
+  </h2> 
+  
+  <div class="sponsors">
+    <div class="sponsor-row">
+      <a href="https://alamarbio.com/" target="_blank">
+        <img src="assets/sponsors/AlamarBiosciencesLogo.png" alt="Alamar Biosciences, Inc.">
+      </a>
+      <a href="https://bioinformatics.ca/hub/" target="_blank">
+        <img src="assets/sponsors/CBHLogo.png" alt="Canadian Bioinformatics Hub">
+      </a>
+      <a href="https://www.bcgsc.ca/" target="_blank">
+        <img src="assets/sponsors/GSCLogo.png" alt="Canada's Michael Smith Genome Sciences Centre">
+      </a>
+    </div>
+    <div class="sponsor-row">
+      <a href="https://www.castlcanada.ca/" target="_blank">
+        <img src="assets/sponsors/CASTLLogo.png" alt="Canadian Alliance for Skills and Training in Life Sciences">
+      </a>
+      <a href="https://www.esbe.com/" target="_blank">
+        <img src="assets/sponsors/ESBEScientificLogo.png" alt="ESBE Scientific">
+      </a>
+    </div>
+  </div>
+
+  <p>
+    Special thanks to Jericho Beach Kayak Center, Rio Theatre, The Hive, Steve's Poke Bar, AVIK Cafe, 4Cats Arts Studio, Progression Bouldering Gym, Koerner's Pub, The Improv Centre, and PupsYoga for the raffle prizes!
+  </p>
+
+  <p>
+    Interested in becoming a sponsor? Check out our <a href="assets/docs/sponsorPkg.pdf" target="_blank">sponsor package</a> and contact our Sponsor Lead by <a href="mailto:bigsat.oc@gmail.com">email</a>. We'd love to discuss details with you.
+  </p>
+
+</body>
+
+<footer>
+    <div class="social-icons">
+    <a href="mailto:bigsat.oc@gmail.com"> 
+      <i class="fa fa-square-envelope" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.facebook.com/BIGresearchday/" target="_blank"> 
+      <i class="fa-brands fa-facebook-square" aria-hidden="true"></i>
+    </a>
+    <a href="https://x.com/ResearchBig" target="_blank"> 
+      <i class="fa-brands fa-square-x-twitter" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.instagram.com/bigsat.26/" target="_blank">  
+      <i class="fa-brands fa-instagram-square" aria-hidden="true"></i>
+    </a>
+    <a href="https://ca.linkedin.com/in/bigsat-research-day-b8b1852b0" target="_blank">
+      <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+    </a>
+    </div>
+    &copy; BiGSAT-OC
+    &nbsp;|&nbsp;
+    Website Template by <a href="https://github.com/mikepierce" target="_blank">Mike Pierce</a>
+</footer>
+
+</html>
